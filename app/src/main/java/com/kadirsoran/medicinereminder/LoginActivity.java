@@ -35,7 +35,7 @@ public class LoginActivity extends AppCompatActivity {
                 String email = emailEditText.getText().toString().trim();
                 String password = passwordEditText.getText().toString().trim();
 
-                // Call the method to authenticate the user
+
                 authenticateUser(email, password);
             }
         });
@@ -47,14 +47,12 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // User login successful
-                            // For simplicity, navigate to PrescriptionListActivity directly
+
                             Intent intent = new Intent(LoginActivity.this, UserProfileActivity.class);
                             startActivity(intent);
-                            finish(); // Close the LoginActivity
+                            finish();
                         } else {
-                            // Login failed
-                            // Handle the error, display a message, or ask the user to try again
+
                             Toast.makeText(LoginActivity.this, "Login failed. Please check your credentials.", Toast.LENGTH_SHORT).show();
                         }
                     }

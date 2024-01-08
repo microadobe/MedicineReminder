@@ -18,11 +18,11 @@ public class PrescriptionAdapter extends ArrayAdapter<Prescription> {
     private List<Prescription> prescriptions;
     private PrescriptionDatabaseHelper dbHelper;
     private void testNotificationForPrescription(Prescription prescription) {
-        // Create an intent for ReminderService
+
         Intent intent = new Intent(context, ReminderService.class);
-        // Pass prescription details to the intent
+
         intent.putExtra("prescriptionName", prescription.getPrescriptionName());
-        // Start the service
+
         context.startService(intent);
     }
 
@@ -57,12 +57,11 @@ public class PrescriptionAdapter extends ArrayAdapter<Prescription> {
         TextView durationTextView = listItemView.findViewById(R.id.textDuration);
         durationTextView.setText("Duration: " + currentPrescription.getDuration());
 
-        // Add a button for taking medicine immediately
         Button deleteMedicineButton = listItemView.findViewById(R.id.buttonDeleteMedicine);
         deleteMedicineButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Handle deleting medicine for the selected prescription
+
                 dbHelper.deletePrescription(currentPrescription.getPrescriptionName());
                 Toast.makeText(getContext(), "Deleted: " + currentPrescription.getPrescriptionName(), Toast.LENGTH_SHORT).show();
 
@@ -71,15 +70,15 @@ public class PrescriptionAdapter extends ArrayAdapter<Prescription> {
 
 
 
-        // Add a button for testing notifications
+
         Button testNotificationButton = listItemView.findViewById(R.id.buttonTestNotification);
         testNotificationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Handle testing notifications for the selected prescription
+
                 Toast.makeText(getContext(), "Testing notification for: " + currentPrescription.getPrescriptionName(), Toast.LENGTH_SHORT).show();
                 testNotificationForPrescription(currentPrescription);
-                // Notify or schedule notification for currentPrescription
+
             }
         });
 

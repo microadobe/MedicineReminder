@@ -53,7 +53,6 @@ public class PrescriptionDatabaseHelper extends SQLiteOpenHelper {
         values.put(COLUMN_FREQUENCY, prescription.getFrequency());
         values.put(COLUMN_DURATION, prescription.getDuration());
 
-        // Insert the prescription and get the ID of the newly inserted row
         long insertedId = db.insert(TABLE_NAME, null, values);
 
         db.close();
@@ -94,7 +93,6 @@ public class PrescriptionDatabaseHelper extends SQLiteOpenHelper {
 
         PendingIntent pendingIntent = PendingIntent.getService(context, 0, intent, 0);
 
-        // Set the alarm to trigger at the specified time
         if (alarmManager != null) {
             alarmManager.set(AlarmManager.RTC_WAKEUP, reminderTimeMillis, pendingIntent);
         }

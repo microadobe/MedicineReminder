@@ -33,7 +33,6 @@ public class SignUpActivity extends AppCompatActivity {
             String email = emailEditText.getText().toString().trim();
             String password = passwordEditText.getText().toString().trim();
 
-            // Call the method to register the user
             registerUser(email, password);
         });
     }
@@ -44,16 +43,11 @@ public class SignUpActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // User registered successfully
-                            // You may navigate to the user's dashboard or display a success message
 
-                            // For example, navigate to UserProfileActivity
                             Intent intent = new Intent(SignUpActivity.this, UserProfileActivity.class);
                             startActivity(intent);
-                            finish(); // Close the SignUpActivity
+                            finish();
                         } else {
-                            // Registration failed
-                            // Handle the error, display a message, or ask the user to try again
                             Toast.makeText(SignUpActivity.this, "Registration failed. Please try again.", Toast.LENGTH_SHORT).show();
                         }
                     }

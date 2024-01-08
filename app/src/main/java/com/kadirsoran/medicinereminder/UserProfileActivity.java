@@ -28,7 +28,6 @@ public class UserProfileActivity extends AppCompatActivity {
         viewTimedPrescriptionsButton = findViewById(R.id.viewTimedPrescriptionsButton);
         viewSaglikBakanligiButton = findViewById(R.id.viewSaglikBakanligiButton);
 
-        // Fetch and display user email
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
             String userEmail = user.getEmail();
@@ -37,7 +36,6 @@ public class UserProfileActivity extends AppCompatActivity {
             }
         }
 
-        // Button click listeners
         addPrescriptionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,14 +47,12 @@ public class UserProfileActivity extends AppCompatActivity {
         viewTimedPrescriptionsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Open PrescriptionListActivity for viewing timed prescriptions
                 startActivity(new Intent(UserProfileActivity.this, PrescriptionListActivity.class));
             }
         });
         viewSaglikBakanligiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Open PrescriptionListActivity for viewing timed prescriptions
                 startActivity(new Intent(UserProfileActivity.this, SaglikBakanligi.class));
             }
         });

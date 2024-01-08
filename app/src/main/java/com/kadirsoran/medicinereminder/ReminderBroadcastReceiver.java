@@ -15,7 +15,6 @@ public class ReminderBroadcastReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        // This method will be called when the alarm is triggered
 
         if (intent != null && intent.hasExtra("prescriptionId")) {
             long prescriptionId = intent.getLongExtra("prescriptionId", -1);

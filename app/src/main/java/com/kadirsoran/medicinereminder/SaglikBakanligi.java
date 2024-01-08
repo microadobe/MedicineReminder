@@ -12,11 +12,9 @@ public class SaglikBakanligi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_educational_resources);
 
-        // Initialize WebView
         webView = findViewById(R.id.webViewEducationalResources);
         webView.setWebViewClient(new WebViewClient());
 
-        // Load an example educational resource (you can replace this URL with your content)
         String url = "https://www.saglik.gov.tr";
         webView.loadUrl(url);
     }

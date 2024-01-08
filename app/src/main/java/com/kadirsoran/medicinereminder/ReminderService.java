@@ -23,15 +23,12 @@ public class ReminderService extends IntentService {
 
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
-        // Retrieve prescription details from the intent
         String prescriptionName = intent.getStringExtra("prescriptionName");
 
-        // Display a notification for the reminder
         showNotification(prescriptionName);
     }
 
     private void showNotification(String prescriptionName) {
-        // Create a notification channel for Android Oreo and higher
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             String channelId = "medication_reminder_channel";
             CharSequence channelName = "Medication Reminder Channel";
@@ -42,7 +39,6 @@ public class ReminderService extends IntentService {
             notificationManager.createNotificationChannel(channel);
         }
 
-        // Build the notification
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "medication_reminder_channel")
                 .setSmallIcon(android.R.drawable.ic_dialog_info)
                 .setContentTitle("Medicine Reminder")
@@ -50,7 +46,6 @@ public class ReminderService extends IntentService {
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setAutoCancel(true);
 
-        // Display the notification
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
 
 
