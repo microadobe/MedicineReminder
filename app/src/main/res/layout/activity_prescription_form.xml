@@ -1,0 +1,49 @@
+<!-- activity_prescription_form.xml -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/prescriptionNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Prescription Name"/>
+
+    <EditText
+        android:id="@+id/dosageEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prescriptionNameEditText"
+        android:layout_marginTop="16dp"
+        android:hint="Dosage"/>
+
+    <EditText
+        android:id="@+id/reminderTimeEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dosageEditText"
+        android:layout_marginTop="16dp"
+        android:hint="Reminder Time"
+        android:focusable="false"
+        android:inputType="none"/>
+
+    <EditText
+        android:id="@+id/reminderDurationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reminderTimeEditText"
+        android:layout_marginTop="16dp"
+        android:hint="Reminder Duration"
+        android:focusable="false"
+        android:inputType="none"/>
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reminderDurationEditText"
+        android:layout_marginTop="16dp"
+        android:text="Save Prescription"/>
+</RelativeLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "536154892381",
+    "firebase_url": "https://vipganyantahminleri.firebaseio.com",
+    "project_id": "vipganyantahminleri",
+    "storage_bucket": "vipganyantahminleri.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:536154892381:android:e36cb6278f85ac8ad505b4",
+        "android_client_info": {
+          "package_name": "com.kadirsoran.medicinereminder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "536154892381-sqdsqmbiaj1lq6hedfmi189acju2stme.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgvosRt_bAat7UoraOMw7epPTs-J_h0kI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "536154892381-sqdsqmbiaj1lq6hedfmi189acju2stme.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

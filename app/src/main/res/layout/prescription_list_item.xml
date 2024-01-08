@@ -1,0 +1,54 @@
+<!-- prescription_list_item.xml -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textPrescriptionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prescription Name"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textDosage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textPrescriptionName"
+        android:layout_marginTop="8dp"
+        android:text="Dosage"/>
+
+    <TextView
+        android:id="@+id/textFrequency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textDosage"
+        android:layout_marginTop="8dp"
+        android:text="Time"/>
+
+    <TextView
+        android:id="@+id/textDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textFrequency"
+        android:layout_marginTop="8dp"
+        android:text="Duration"/>
+
+
+    <Button
+        android:id="@+id/buttonTestNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="180dp"
+        android:text="Test Notification" />
+    <Button
+        android:id="@+id/buttonDeleteMedicine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="180dp"
+        android:text="Delete Medicine" />
+</RelativeLayout>
